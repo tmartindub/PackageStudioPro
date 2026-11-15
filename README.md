@@ -27,3 +27,9 @@ Prerequisite entries use `Name|Method|Help URL`. Supported detection methods are
 Signing settings stay in the authoring project. Certificate/tool paths are not copied into the installed package metadata. Setup must be signed after its bundle has been embedded. No certificate was supplied for the Web Studio release, so its installers are unsigned.
 
 The existing guides and help describe the original authoring screens. Use these repair notes for the updated installation, prerequisite and uninstall behavior. Existing `Exports`, `MySetups`, build outputs and backup folders are user/generated content and are excluded from this source repository.
+
+## Ready-to-build Web Studio projects
+
+Open either saved project under `MySetups/DelphiWebStudioPro-1.0.0.1`. Each has a permanent architecture-specific payload containing the editor, WebView2 loader, SFTP workflow, all seven guides and license notices. The adjacent README explains opening, validation, output paths and refreshing the snapshots. These two deliberately retained release projects are versioned in Git; other user projects under MySetups remain excluded.
+
+Opening a saved project selects its own product-specific Exports folder. Rebuilding preserves additional project shortcuts, including the installed PDF User Guide shortcut.

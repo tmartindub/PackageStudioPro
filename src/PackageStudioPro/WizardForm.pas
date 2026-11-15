@@ -1,4 +1,4 @@
-unit WizardForm;
+﻿unit WizardForm;
 
 interface
 
@@ -597,7 +597,14 @@ begin
   for I := 0 to PayloadList.Items.Count - 1 do
     if (Trim(PayloadList.Items[I]) <> '') and (FProject.Files.IndexOf(PayloadList.Items[I]) < 0) then
       FProject.Files.Add(PayloadList.Items[I]);
-  FProject.Shortcuts.Clear;
+  // Retain additional project shortcuts (for example an installed user guide).
+  // The two checkboxes control their locations and the primary app shortcut.
+  for I := FProject.Shortcuts.Count - 1 downto 0 do
+    if (FProject.Shortcuts[I].StartsWith('StartMenu|', True) and
+        (not StartMenuCheckBox.IsChecked or FProject.Shortcuts[I].EndsWith('|' + ExtractFileName(AppExeEdit.Text), True))) or
+       (FProject.Shortcuts[I].StartsWith('Desktop|', True) and
+        (not DesktopCheckBox.IsChecked or FProject.Shortcuts[I].EndsWith('|' + ExtractFileName(AppExeEdit.Text), True))) then
+      FProject.Shortcuts.Delete(I);
   if (Trim(AppExeEdit.Text) <> '') and StartMenuCheckBox.IsChecked then
     FProject.Shortcuts.Add('StartMenu|' + ProductNameEdit.Text + '|' + ExtractFileName(AppExeEdit.Text));
   if (Trim(AppExeEdit.Text) <> '') and DesktopCheckBox.IsChecked then
@@ -857,6 +864,7 @@ begin
     ProductNameEdit.Text := FProject.ProductName;
     PublisherEdit.Text := FProject.Publisher;
     VersionEdit.Text := FProject.Version;
+    OutputFolderEdit.Text := IncludeTrailingPathDelimiter(ExportRootFolder) + ProductToken;
     SelectInstallMode(Pos(UpperCase(IncludeTrailingPathDelimiter(ProgramFilesInstallRoot)),
       UpperCase(IncludeTrailingPathDelimiter(FProject.InstallFolder))) = 1, False);
     InstallFolderEdit.Text := FProject.InstallFolder;
