@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1f2937" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="#f3f6fb"/>
+  <rect x="130" y="58" width="940" height="644" rx="8" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="130" y="58" width="940" height="70" rx="8" fill="#e8f4ff"/>
+  <rect x="130" y="119" width="940" height="1" fill="#c9d8e8"/>
+  <rect x="154" y="80" width="28" height="28" rx="4" fill="#3b7ddd"/>
+  <rect x="160" y="86" width="6" height="6" fill="#ffffff"/>
+  <rect x="170" y="86" width="6" height="6" fill="#ffffff"/>
+  <rect x="160" y="96" width="6" height="6" fill="#ffffff"/>
+  <rect x="170" y="96" width="6" height="6" fill="#ffffff"/>
+  <text x="196" y="101" font-family="Segoe UI, Arial" font-size="22" font-weight="600" fill="#15395f">Test Setup Wizard</text>
+  <text x="1038" y="102" font-family="Segoe UI, Arial" font-size="22" fill="#64748b">x</text>
+
+  <rect x="130" y="128" width="940" height="486" fill="#ffffff"/>
+  <rect x="155" y="168" width="310" height="406" rx="4" fill="#2b5f9e"/>
+  <circle cx="310" cy="274" r="72" fill="#ffffff" opacity=".12"/>
+  <rect x="263" y="227" width="72" height="70" rx="12" fill="#ffffff"/>
+  <rect x="278" y="247" width="12" height="12" fill="#2b5f9e"/>
+  <rect x="299" y="247" width="12" height="12" fill="#2b5f9e"/>
+  <rect x="278" y="268" width="12" height="12" fill="#2b5f9e"/>
+  <rect x="299" y="268" width="12" height="12" fill="#2b5f9e"/>
+  <circle cx="338" cy="299" r="27" fill="#31d6e8" stroke="#ffffff" stroke-width="5"/>
+  <text x="331" y="309" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#ffffff">&gt;</text>
+  <text x="310" y="388" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="700" fill="#ffffff">Package Studio Pro</text>
+  <text x="310" y="422" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#dcecff">From app to installer in minutes.</text>
+
+  <text x="510" y="210" font-family="Segoe UI, Arial" font-size="34" font-weight="700" fill="#173f6b">Welcome to Test Setup</text>
+  <text x="510" y="254" font-family="Segoe UI, Arial" font-size="18" fill="#475569">This wizard will install Test Application on your computer.</text>
+  <text x="510" y="310" font-family="Segoe UI, Arial" font-size="16" fill="#334155">Before continuing, close any running copies of the application.</text>
+  <text x="510" y="344" font-family="Segoe UI, Arial" font-size="16" fill="#334155">Click Next to review the license agreement and installation options.</text>
+  <rect x="510" y="414" width="462" height="96" rx="6" fill="#f7fbff" stroke="#c9d8e8"/>
+  <text x="532" y="448" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="#173f6b">Package:</text>
+  <text x="630" y="448" font-family="Segoe UI, Arial" font-size="15" fill="#334155">testsetup.exe</text>
+  <text x="532" y="480" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="#173f6b">Publisher:</text>
+  <text x="630" y="480" font-family="Segoe UI, Arial" font-size="15" fill="#334155">Software Hub</text>
+
+  <rect x="130" y="614" width="940" height="88" fill="#eaf2fb"/>
+  <rect x="838" y="638" width="96" height="38" rx="4" fill="#ffffff" stroke="#b9c7d8"/>
+  <text x="868" y="662" font-family="Segoe UI, Arial" font-size="14" fill="#334155">Cancel</text>
+  <rect x="946" y="638" width="96" height="38" rx="4" fill="#3b7ddd"/>
+  <text x="978" y="662" font-family="Segoe UI, Arial" font-size="14" font-weight="600" fill="#ffffff">Next</text>
+</svg>

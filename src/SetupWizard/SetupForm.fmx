@@ -1,0 +1,608 @@
+object SetupWizardForm: TSetupWizardForm
+  Left = 0
+  Top = 0
+  Caption = 'Package Studio Pro Setup'
+  ClientHeight = 632
+  ClientWidth = 1179
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object StartupTimer: TTimer
+    Enabled = False
+    OnTimer = StartupTimerTimer
+  end
+  object TopPanel: TRectangle
+    Fill.Color = xFF2B5F9E
+    Size.Width = 1179.000000000000000000
+    Size.Height = 105.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object BrandIcon: TRectangle
+      Fill.Color = xFF083F9F
+      Position.X = 24.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 64.000000000000000000
+      Size.Height = 64.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF7DB8FF
+      XRadius = 14.000000000000000000
+      YRadius = 14.000000000000000000
+      object BrandWindow: TRectangle
+        Fill.Color = claWhite
+        Position.X = 12.000000000000000000
+        Position.Y = 14.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        object BrandPane1: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 7.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 6.000000000000000000
+          Size.Height = 6.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object BrandPane2: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 17.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 6.000000000000000000
+          Size.Height = 6.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object BrandPane3: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 7.000000000000000000
+          Position.Y = 18.000000000000000000
+          Size.Width = 6.000000000000000000
+          Size.Height = 6.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object BrandPane4: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 17.000000000000000000
+          Position.Y = 18.000000000000000000
+          Size.Width = 6.000000000000000000
+          Size.Height = 6.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+      object BrandDial: TRectangle
+        Fill.Color = xFF31D6E8
+        Position.X = 34.000000000000000000
+        Position.Y = 31.000000000000000000
+        Size.Width = 24.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claWhite
+        Stroke.Thickness = 2.000000000000000000
+        XRadius = 12.000000000000000000
+        YRadius = 12.000000000000000000
+      end
+      object BrandArrowLabel: TLabel
+        StyledSettings = []
+        Position.X = 42.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 15.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = '>'
+      end
+    end
+    object BrandNameLabel: TLabel
+      StyledSettings = []
+      Position.X = 104.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Package Studio Pro'
+    end
+    object BrandSloganLabel: TLabel
+      StyledSettings = []
+      Position.X = 106.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = xFFE6F1FF
+      Text = 'From App to Installer in Minutes, installed in seconds.'
+    end
+  end
+  object ButtonPanel: TLayout
+    Position.X = -8.000000000000000000
+    Position.Y = 375.000000000000000000
+    Size.Width = 1179.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object FooterBrandIcon: TRectangle
+      Fill.Color = xFF083F9F
+      Position.X = 18.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 38.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF7DB8FF
+      XRadius = 8.000000000000000000
+      YRadius = 8.000000000000000000
+      object FooterBrandWindow: TRectangle
+        Fill.Color = claWhite
+        Position.X = 7.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 18.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        object FooterBrandPane1: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 4.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 4.000000000000000000
+          Size.Height = 4.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object FooterBrandPane2: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 10.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 4.000000000000000000
+          Size.Height = 4.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object FooterBrandPane3: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 4.000000000000000000
+          Position.Y = 11.000000000000000000
+          Size.Width = 4.000000000000000000
+          Size.Height = 4.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object FooterBrandPane4: TRectangle
+          Fill.Color = xFF1267D8
+          Position.X = 10.000000000000000000
+          Position.Y = 11.000000000000000000
+          Size.Width = 4.000000000000000000
+          Size.Height = 4.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+      object FooterBrandDial: TRectangle
+        Fill.Color = xFF31D6E8
+        Position.X = 21.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 14.000000000000000000
+        Size.Height = 14.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claWhite
+        Stroke.Thickness = 1.500000000000000000
+        XRadius = 7.000000000000000000
+        YRadius = 7.000000000000000000
+      end
+      object FooterBrandArrowLabel: TLabel
+        StyledSettings = []
+        Position.X = 25.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 9.000000000000000000
+        Size.Height = 14.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = '>'
+      end
+    end
+    object FooterBrandLabel: TLabel
+      StyledSettings = []
+      Position.X = 64.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 294.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = xFF173F6B
+      Text = 'Package Studio Pro   Professional setup made simple.'
+    end
+    object CloseButton: TButton
+      Align = Right
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 18.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 1061.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Close'
+      OnClick = CloseButtonClick
+    end
+    object UninstallButton: TButton
+      Align = Right
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 921.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Uninstall'
+      OnClick = UninstallButtonClick
+    end
+    object UserHelpButton: TButton
+      Align = Right
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 801.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Help'
+      OnClick = UserHelpButtonClick
+    end
+    object VerifyButton: TButton
+      Align = Right
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 661.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Verify'
+      OnClick = VerifyButtonClick
+    end
+    object RepairButton: TButton
+      Align = Right
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 521.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Repair'
+      OnClick = RepairButtonClick
+    end
+    object InstallButton: TButton
+      Align = Right
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 381.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Install'
+      OnClick = InstallButtonClick
+    end
+  end
+  object LogPanel: TRectangle
+    Fill.Color = xFFEAF2FB
+    Position.Y = 431.000000000000000000
+    Size.Width = 1179.000000000000000000
+    Size.Height = 220.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFB9D0EA
+    object StatusLabel: TLabel
+      StyledSettings = []
+      Margins.Left = 18.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 18.000000000000000000
+      Position.X = 22.000000000000000000
+      Size.Width = 363.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF173F6B
+      Text = 'Ready.'
+    end
+    object LogMemo: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      TextPrompt = 'Install Log'
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 4.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 20.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 905.000000000000000000
+      Size.Height = 159.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 901.000000000000000000
+      Viewport.Height = 155.000000000000000000
+    end
+  end
+  object ContentPanel: TRectangle
+    Fill.Color = claWhite
+    Margins.Left = 18.000000000000000000
+    Margins.Top = 18.000000000000000000
+    Margins.Right = 18.000000000000000000
+    Margins.Bottom = 18.000000000000000000
+    Position.X = 14.000000000000000000
+    Position.Y = 112.000000000000000000
+    Size.Width = 1143.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFB9D0EA
+    XRadius = 6.000000000000000000
+    YRadius = 6.000000000000000000
+    object ProductNameLabel: TLabel
+      StyledSettings = []
+      Position.X = 20.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 520.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF173F6B
+      Text = 'Product'
+    end
+    object InstallFolderLabel: TLabel
+      StyledSettings = []
+      Position.X = 20.000000000000000000
+      Position.Y = 54.000000000000000000
+      Size.Width = 540.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = xFF294B70
+      Text = 'Install folder'
+    end
+    object InstallFolderEdit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Position.X = 20.000000000000000000
+      Position.Y = 78.000000000000000000
+      Size.Width = 430.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object BrowseInstallFolderButton: TButton
+      Position.X = 466.000000000000000000
+      Position.Y = 78.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Browse...'
+      OnClick = BrowseInstallFolderButtonClick
+    end
+    object PackageInfoLabel: TLabel
+      StyledSettings = []
+      Position.X = 20.000000000000000000
+      Position.Y = 122.000000000000000000
+      Size.Width = 940.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = xFF58728E
+      Text = 'Package information'
+    end
+    object ItemsLabel: TLabel
+      StyledSettings = []
+      Position.X = 20.000000000000000000
+      Position.Y = 158.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF173F6B
+      Text = 'Items to install'
+    end
+    object RequiredAppCheckBox: TCheckBox
+      IsChecked = True
+      Position.X = 20.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 260.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Application files'
+    end
+    object RequiredHelpCheckBox: TCheckBox
+      IsChecked = True
+      Position.X = 20.000000000000000000
+      Position.Y = 212.000000000000000000
+      Size.Width = 260.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Help folder'
+    end
+    object StartMenuCheckBox: TCheckBox
+      IsChecked = True
+      Position.X = 300.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 260.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Create Start Menu shortcut'
+    end
+    object DesktopCheckBox: TCheckBox
+      IsChecked = True
+      Position.X = 300.000000000000000000
+      Position.Y = 212.000000000000000000
+      Size.Width = 260.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Create Desktop shortcut'
+    end
+    object SummaryMemo: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Position.X = 20.000000000000000000
+      Position.Y = 108.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 138.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Visible = False
+      Viewport.Width = 386.000000000000000000
+      Viewport.Height = 134.000000000000000000
+    end
+    object LicenseLabel: TLabel
+      StyledSettings = []
+      Position.X = 690.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF173F6B
+      Text = 'EULA'
+    end
+    object LicenseMemo: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      TextSettings.WordWrap = True
+      Position.X = 690.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 425.000000000000000000
+      Size.Height = 165.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 421.000000000000000000
+      Viewport.Height = 161.000000000000000000
+    end
+    object AcceptEulaCheckBox: TCheckBox
+      Position.X = 690.000000000000000000
+      Position.Y = 226.000000000000000000
+      Size.Width = 425.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'I accept the license agreement'
+      OnChange = AcceptEulaCheckBoxChange
+    end
+  end
+  object WelcomePanel: TRectangle
+    Fill.Color = claWhite
+    Position.X = 14.000000000000000000
+    Position.Y = 112.000000000000000000
+    Size.Width = 1143.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFB9D0EA
+    XRadius = 6.000000000000000000
+    YRadius = 6.000000000000000000
+    object WelcomeAccentPanel: TRectangle
+      Fill.Color = xFF2B5F9E
+      Position.X = 18.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 290.000000000000000000
+      Size.Height = 220.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 6.000000000000000000
+      YRadius = 6.000000000000000000
+      object WelcomeAccentTitleLabel: TLabel
+        StyledSettings = []
+        Position.X = 24.000000000000000000
+        Position.Y = 86.000000000000000000
+        Size.Width = 240.000000000000000000
+        Size.Height = 64.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Product Setup'
+      end
+      object WelcomeAccentSloganLabel: TLabel
+        StyledSettings = []
+        Position.X = 24.000000000000000000
+        Position.Y = 162.000000000000000000
+        Size.Width = 240.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = xFFE6F1FF
+        Text = 'From App to Installer in Minutes.'
+      end
+    end
+    object WelcomeTitleLabel: TLabel
+      StyledSettings = []
+      Position.X = 350.000000000000000000
+      Position.Y = 38.000000000000000000
+      Size.Width = 720.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 26.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF173F6B
+      Text = 'Welcome to Setup'
+    end
+    object WelcomeSubtitleLabel: TLabel
+      StyledSettings = []
+      Position.X = 352.000000000000000000
+      Position.Y = 94.000000000000000000
+      Size.Width = 720.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = xFF294B70
+      Text = 'This wizard will install the application on your computer.'
+    end
+    object WelcomeInstructionLabel: TLabel
+      StyledSettings = []
+      Position.X = 352.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 720.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.FontColor = xFF294B70
+      Text = 'Before continuing, close any running copies of the application.'
+    end
+    object WelcomeInfoLabel: TLabel
+      StyledSettings = []
+      Position.X = 352.000000000000000000
+      Position.Y = 178.000000000000000000
+      Size.Width = 620.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = xFF58728E
+      Text = 'Publisher | Version | Files'
+    end
+    object ContinueButton: TButton
+      Position.X = 986.000000000000000000
+      Position.Y = 202.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Continue'
+      OnClick = ContinueButtonClick
+    end
+  end
+end

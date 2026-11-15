@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1f2937" flood-opacity=".18"/></filter></defs>
+  <rect width="1200" height="760" fill="#f3f6fb"/>
+  <rect x="130" y="58" width="940" height="644" rx="8" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="130" y="58" width="940" height="70" rx="8" fill="#e8f4ff"/>
+  <rect x="130" y="119" width="940" height="1" fill="#c9d8e8"/>
+  <rect x="154" y="80" width="28" height="28" rx="4" fill="#3b7ddd"/>
+  <text x="196" y="101" font-family="Segoe UI, Arial" font-size="22" font-weight="600" fill="#15395f">Test Setup Wizard</text>
+  <text x="1038" y="102" font-family="Segoe UI, Arial" font-size="22" fill="#64748b">x</text>
+
+  <text x="170" y="184" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#173f6b">License Agreement</text>
+  <text x="170" y="220" font-family="Segoe UI, Arial" font-size="16" fill="#475569">Please review the license terms before installing Test Application.</text>
+  <rect x="170" y="252" width="860" height="270" rx="4" fill="#ffffff" stroke="#b9c7d8"/>
+  <text x="196" y="288" font-family="Segoe UI, Arial" font-size="18" font-weight="700" fill="#1e293b">End User License Agreement</text>
+  <text x="196" y="326" font-family="Segoe UI, Arial" font-size="15" fill="#334155">This software is provided by Software Hub. You may install and use this</text>
+  <text x="196" y="352" font-family="Segoe UI, Arial" font-size="15" fill="#334155">application according to the terms included with this package.</text>
+  <text x="196" y="398" font-family="Segoe UI, Arial" font-size="15" fill="#334155">The application files, help content, shortcuts, and optional support files</text>
+  <text x="196" y="424" font-family="Segoe UI, Arial" font-size="15" fill="#334155">will be installed to the selected destination folder.</text>
+  <text x="196" y="470" font-family="Segoe UI, Arial" font-size="15" fill="#334155">Click I Agree to continue with the installation.</text>
+  <rect x="1006" y="260" width="8" height="254" rx="4" fill="#d8e2ee"/>
+  <rect x="1006" y="260" width="8" height="70" rx="4" fill="#94a3b8"/>
+
+  <circle cx="181" cy="562" r="8" fill="#3b7ddd"/>
+  <circle cx="181" cy="562" r="3" fill="#ffffff"/>
+  <text x="202" y="567" font-family="Segoe UI, Arial" font-size="15" fill="#334155">I accept the terms in the license agreement</text>
+
+  <rect x="130" y="614" width="940" height="88" fill="#eaf2fb"/>
+  <rect x="722" y="638" width="96" height="38" rx="4" fill="#ffffff" stroke="#b9c7d8"/>
+  <text x="748" y="662" font-family="Segoe UI, Arial" font-size="14" fill="#334155">Back</text>
+  <rect x="830" y="638" width="96" height="38" rx="4" fill="#ffffff" stroke="#b9c7d8"/>
+  <text x="860" y="662" font-family="Segoe UI, Arial" font-size="14" fill="#334155">Cancel</text>
+  <rect x="938" y="638" width="104" height="38" rx="4" fill="#3b7ddd"/>
+  <text x="966" y="662" font-family="Segoe UI, Arial" font-size="14" font-weight="600" fill="#ffffff">I Agree</text>
+</svg>

@@ -1,0 +1,1054 @@
+object SetupBuildWizardForm: TSetupBuildWizardForm
+  Left = 0
+  Top = 0
+  Caption = 'Package Studio Pro Setup Build Wizard'
+  ClientHeight = 760
+  ClientWidth = 1300
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object RootLayout: TLayout
+    Align = Client
+    Size.Width = 1300.000000000000000000
+    Size.Height = 760.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderPanel: TRectangle
+      Align = Top
+      Fill.Color = xFF3B7DDD
+      Size.Width = 1300.000000000000000000
+      Size.Height = 84.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object BrandIcon: TRectangle
+        Fill.Color = xFF083F9F
+        Position.X = 20.000000000000000000
+        Position.Y = 14.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF7DB8FF
+        XRadius = 12.000000000000000000
+        YRadius = 12.000000000000000000
+        object BrandWindow: TRectangle
+          Fill.Color = claWhite
+          Position.X = 11.000000000000000000
+          Position.Y = 13.000000000000000000
+          Size.Width = 25.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          object BrandPane1: TRectangle
+            Fill.Color = xFF1267D8
+            Position.X = 7.000000000000000000
+            Position.Y = 9.000000000000000000
+            Size.Width = 7.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+          object BrandPane2: TRectangle
+            Fill.Color = xFF1267D8
+            Position.X = 18.000000000000000000
+            Position.Y = 9.000000000000000000
+            Size.Width = 7.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+          object BrandPane3: TRectangle
+            Fill.Color = xFF1267D8
+            Position.X = 7.000000000000000000
+            Position.Y = 19.000000000000000000
+            Size.Width = 7.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+          object BrandPane4: TRectangle
+            Fill.Color = xFF1267D8
+            Position.X = 18.000000000000000000
+            Position.Y = 19.000000000000000000
+            Size.Width = 7.000000000000000000
+            Size.Height = 7.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+        end
+        object BrandDial: TRectangle
+          Fill.Color = xFF31D6E8
+          Position.X = 31.000000000000000000
+          Position.Y = 29.000000000000000000
+          Size.Width = 20.000000000000000000
+          Size.Height = 20.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claWhite
+          Stroke.Thickness = 2.000000000000000000
+          XRadius = 10.000000000000000000
+          YRadius = 10.000000000000000000
+        end
+        object BrandArrowLabel: TLabel
+          StyledSettings = []
+          Position.X = 36.000000000000000000
+          Position.Y = 28.000000000000000000
+          Size.Width = 16.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = '>'
+        end
+      end
+      object TitleLabel: TLabel
+        StyledSettings = []
+        Position.X = 88.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 221.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 23.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Package Studio Pro'
+      end
+      object SubtitleLabel: TLabel
+        StyledSettings = []
+        Position.X = 90.000000000000000000
+        Position.Y = 50.000000000000000000
+        Size.Width = 197.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFE6F1FF
+        Text = 'From App to Installer in Minutes.'
+      end
+      object HeaderPurposeLabel: TLabel
+        Visible = False
+      end
+      object ProjectFileLabel: TLabel
+        StyledSettings = []
+        Position.X = 339.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 220.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Project file name'
+      end
+      object ProjectFileEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Position.X = 339.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 470.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object NewProjectButton: TButton
+        Position.X = 841.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'New Project'
+        OnClick = NewProjectButtonClick
+      end
+      object OpenProjectButton: TButton
+        Position.X = 941.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 132.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Open Saved Project...'
+        OnClick = OpenProjectButtonClick
+      end
+      object BrowseProjectButton: TButton
+        Position.X = 1083.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Save Project'
+        OnClick = BrowseProjectButtonClick
+      end
+      object UserHelpButton: TButton
+        Position.X = 1083.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Help'
+        OnClick = UserHelpButtonClick
+      end
+    end
+    object FooterPanel: TRectangle
+      Align = Bottom
+      Fill.Color = xFFEAF2FB
+      Position.Y = 688.000000000000000000
+      Size.Width = 1300.000000000000000000
+      Size.Height = 72.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFB9D0EA
+      object FooterBrandLabel: TLabel
+        StyledSettings = []
+        Position.X = 20.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 430.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFF173F6B
+        Text = 'Package Studio Pro   From app to installer in minutes.'
+      end
+      object ValidateButton: TButton
+        Visible = False
+        Position.X = 816.000000000000000000
+        Position.Y = 11.000000000000000000
+        Size.Width = 124.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Validate Project'
+        OnClick = ValidateButtonClick
+      end
+      object BuildButton: TButton
+        Visible = False
+        Position.X = 948.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 124.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Build Setup File'
+        OnClick = BuildButtonClick
+      end
+      object CloseButton: TButton
+        Position.X = 1080.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Close'
+        OnClick = CloseButtonClick
+      end
+    end
+    object FooterBrandIcon: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandWindow: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandPane1: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandPane2: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandPane3: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandPane4: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandDial: TRectangle
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object FooterBrandArrowLabel: TLabel
+      Visible = False
+    end
+    object ContentScroll: TScrollBox
+      Align = Client
+      Size.Width = 1300.000000000000000000
+      Size.Height = 604.000000000000000000
+      Size.PlatformDefault = False
+      Viewport.Width = 1300.000000000000000000
+      Viewport.Height = 604.000000000000000000
+      object MainTabs: TTabControl
+        Align = Client
+        Size.Width = 1300.000000000000000000
+        Size.Height = 604.000000000000000000
+        Size.PlatformDefault = False
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = Top
+        OnChange = MainTabsChange
+        Sizes = (
+          1300s
+          576s
+          1300s
+          576s
+          1300s
+          576s
+          1300s
+          576s
+          1300s
+          576s)
+        object ProductTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Font.Size = 13.500000000000000000
+          StyledSettings = []
+          IsSelected = False
+          Size.Width = 68.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Product'
+          ExplicitSize.cx = 80.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          object ProductScroll: TScrollBox
+            Align = Client
+            Size.Width = 1300.000000000000000000
+            Size.Height = 576.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 1300.000000000000000000
+            Viewport.Height = 576.000000000000000000
+            object ProductPage: TLayout
+              Position.X = 28.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 1060.000000000000000000
+              Size.Height = 360.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object ProjectSourceLabel: TLabel
+                StyledSettings = []
+                Size.Width = 720.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Project source file'
+              end
+              object ProjectSourceEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 30.000000000000000000
+                Size.Width = 720.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Select .dpr, .dproj, .fmx, .pas, or .dfm source file'
+              end
+              object BrowseSourceButton: TButton
+                Position.X = 740.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 180.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Browse Source File...'
+                OnClick = BrowseSourceButtonClick
+              end
+              object AppExeLabel: TLabel
+                StyledSettings = []
+                Position.Y = 94.000000000000000000
+                Size.Width = 720.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Application EXE to install'
+              end
+              object AppExeEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 124.000000000000000000
+                Size.Width = 720.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Select the compiled application executable'
+              end
+              object BrowseAppButton: TButton
+                Position.X = 740.000000000000000000
+                Position.Y = 124.000000000000000000
+                Size.Width = 180.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Browse Application EXE...'
+                OnClick = BrowseAppButtonClick
+              end
+              object ProductNameLabel: TLabel
+                Position.Y = 202.000000000000000000
+                Size.Width = 300.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Product name'
+              end
+              object ProductNameEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 232.000000000000000000
+                Size.Width = 320.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                OnChangeTracking = ProductNameEditChangeTracking
+              end
+              object PublisherLabel: TLabel
+                Position.X = 348.000000000000000000
+                Position.Y = 202.000000000000000000
+                Size.Width = 330.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Publisher'
+              end
+              object PublisherEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 348.000000000000000000
+                Position.Y = 232.000000000000000000
+                Size.Width = 340.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object VersionLabel: TLabel
+                Position.X = 716.000000000000000000
+                Position.Y = 202.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Version'
+              end
+              object VersionEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 716.000000000000000000
+                Position.Y = 232.000000000000000000
+                Size.Width = 150.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+          end
+        end
+        object PayloadTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Font.Size = 13.500000000000000000
+          StyledSettings = []
+          IsSelected = False
+          Size.Width = 67.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Payload'
+          ExplicitSize.cx = 80.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          object PayloadScroll: TScrollBox
+            Align = Client
+            Size.Width = 1300.000000000000000000
+            Size.Height = 576.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 1300.000000000000000000
+            Viewport.Height = 576.000000000000000000
+            object PayloadPage: TLayout
+              Position.X = 31.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 900.000000000000000000
+              Size.Height = 350.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object PayloadLabel: TLabel
+                StyledSettings = []
+                Size.Width = 760.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Payload and support files'
+              end
+              object PayloadPathEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 30.000000000000000000
+                Size.Width = 665.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Last selected payload file or folder'
+              end
+              object BrowsePayloadButton: TButton
+                Position.X = 691.000000000000000000
+                Position.Y = 126.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Add Files...'
+                OnClick = BrowsePayloadButtonClick
+              end
+              object AddPayloadButton: TButton
+                Position.X = 691.000000000000000000
+                Position.Y = 174.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Add Folder...'
+                OnClick = AddPayloadFolderButtonClick
+              end
+              object RemovePayloadButton: TButton
+                Position.X = 691.000000000000000000
+                Position.Y = 222.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Remove Selected'
+                OnClick = RemovePayloadButtonClick
+              end
+              object PayloadList: TListBox
+                Position.Y = 90.000000000000000000
+                Size.Width = 665.000000000000000000
+                Size.Height = 210.000000000000000000
+                Size.PlatformDefault = False
+                DisableFocusEffect = True
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 661.000000000000000000
+                Viewport.Height = 206.000000000000000000
+              end
+            end
+          end
+        end
+        object InstallTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Font.Size = 13.500000000000000000
+          StyledSettings = []
+          IsSelected = False
+          Size.Width = 56.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Install'
+          ExplicitSize.cx = 80.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          object InstallScroll: TScrollBox
+            Align = Client
+            Size.Width = 1300.000000000000000000
+            Size.Height = 576.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 1300.000000000000000000
+            Viewport.Height = 576.000000000000000000
+            object InstallPage: TLayout
+              Position.X = 28.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 1060.000000000000000000
+              Size.Height = 400.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object InstallModeLabel: TLabel
+                StyledSettings = []
+                Size.Width = 280.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Install Information'
+              end
+              object CurrentUserRadio: TRadioButton
+                Position.Y = 32.000000000000000000
+                Size.Width = 260.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Install for current user'
+                OnChange = CurrentUserRadioChange
+              end
+              object ProgramFilesRadio: TRadioButton
+                IsChecked = True
+                Position.Y = 68.000000000000000000
+                Size.Width = 260.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Install under Program Files'
+                OnChange = ProgramFilesRadioChange
+              end
+              object InstallFolderLabel: TLabel
+                Position.X = 300.000000000000000000
+                Size.Width = 160.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Install folder'
+              end
+              object InstallFolderEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 300.000000000000000000
+                Position.Y = 32.000000000000000000
+                Size.Width = 520.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object BrowseInstallButton: TButton
+                Position.X = 840.000000000000000000
+                Position.Y = 32.000000000000000000
+                Size.Width = 180.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Browse Install Folder...'
+                OnClick = BrowseInstallButtonClick
+              end
+              object ShortcutLabel: TLabel
+                StyledSettings = []
+                Position.Y = 126.000000000000000000
+                Size.Width = 260.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Shortcuts'
+              end
+              object StartMenuCheckBox: TCheckBox
+                IsChecked = True
+                Position.Y = 156.000000000000000000
+                Size.Width = 240.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Create Start Menu shortcut'
+                OnChange = StartMenuCheckBoxChange
+              end
+              object DesktopCheckBox: TCheckBox
+                IsChecked = True
+                Position.X = 260.000000000000000000
+                Position.Y = 156.000000000000000000
+                Size.Width = 230.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Create Desktop shortcut'
+                OnChange = DesktopCheckBoxChange
+              end
+              object LicenseLabel: TLabel
+                StyledSettings = []
+                Position.Y = 222.000000000000000000
+                Size.Width = 260.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Optional license text'
+              end
+              object LicenseMemo: TMemo
+                Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+                DataDetectorTypes = []
+                TextSettings.WordWrap = True
+                Position.Y = 252.000000000000000000
+                Size.Width = 820.000000000000000000
+                Size.Height = 130.000000000000000000
+                Size.PlatformDefault = False
+                Viewport.Width = 816.000000000000000000
+                Viewport.Height = 126.000000000000000000
+              end
+            end
+          end
+        end
+        object IntegrationTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Font.Size = 13.500000000000000000
+          StyledSettings = []
+          IsSelected = True
+          Size.Width = 87.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Integration'
+          ExplicitSize.cx = 80.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          object IntegrationScroll: TScrollBox
+            Align = Client
+            Size.Width = 1300.000000000000000000
+            Size.Height = 576.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 1284.000000000000000000
+            Viewport.Height = 576.000000000000000000
+            object IntegrationPage: TLayout
+              Position.X = 28.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 1044.000000000000000000
+              Size.Height = 780.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object EnvironmentLabel: TLabel
+                StyledSettings = []
+                Size.Width = 280.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Environment variables'
+              end
+              object EnvironmentNameEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 30.000000000000000000
+                Size.Width = 200.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Variable name'
+              end
+              object EnvironmentValueEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 214.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 410.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Value'
+              end
+              object AddEnvironmentButton: TButton
+                Position.X = 638.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 86.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Add'
+                OnClick = AddEnvironmentButtonClick
+              end
+              object RemoveEnvironmentButton: TButton
+                Position.X = 736.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 150.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Remove Selected'
+                OnClick = RemoveEnvironmentButtonClick
+              end
+              object EnvironmentList: TListBox
+                Position.Y = 80.000000000000000000
+                Size.Width = 886.000000000000000000
+                Size.Height = 74.000000000000000000
+                Size.PlatformDefault = False
+                DisableFocusEffect = True
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 882.000000000000000000
+                Viewport.Height = 70.000000000000000000
+              end
+              object PathEntryLabel: TLabel
+                StyledSettings = []
+                Position.Y = 184.000000000000000000
+                Size.Width = 280.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'PATH entries (HKCU Path)'
+              end
+              object PathEntryEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TextSettings.Font.Size = 12.500000000000000000
+                Position.Y = 212.000000000000000000
+                Size.Width = 624.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = '{app} or a folder to append to PATH'
+                StyledSettings = [Family, Style, FontColor]
+              end
+              object AddPathEntryButton: TButton
+                StyledSettings = [Family, Style, FontColor]
+                Position.X = 638.000000000000000000
+                Position.Y = 212.000000000000000000
+                Size.Width = 100.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Add PATH'
+                OnClick = AddPathEntryButtonClick
+              end
+              object RemovePathEntryButton: TButton
+                StyledSettings = [Family, Style, FontColor]
+                Position.X = 750.000000000000000000
+                Position.Y = 212.000000000000000000
+                Size.Width = 136.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Remove Selected'
+                OnClick = RemovePathEntryButtonClick
+              end
+              object PathEntryList: TListBox
+                Position.Y = 256.000000000000000000
+                Size.Width = 886.000000000000000000
+                Size.Height = 90.000000000000000000
+                Size.PlatformDefault = False
+                DisableFocusEffect = True
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 882.000000000000000000
+                Viewport.Height = 86.000000000000000000
+              end
+              object AssociationLabel: TLabel
+                StyledSettings = []
+                Position.Y = 374.000000000000000000
+                Size.Width = 760.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'File association'
+              end
+              object AssociationExtensionEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 402.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = '.abc'
+              end
+              object AssociationDescriptionEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 132.000000000000000000
+                Position.Y = 402.000000000000000000
+                Size.Width = 250.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Description'
+              end
+              object AssociationTargetEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 394.000000000000000000
+                Position.Y = 402.000000000000000000
+                Size.Width = 280.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Target'
+              end
+              object BrowseAssociationTargetButton: TButton
+                Position.X = 694.000000000000000000
+                Position.Y = 402.000000000000000000
+                Size.Width = 85.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Browse...'
+                OnClick = BrowseAssociationTargetButtonClick
+              end
+              object AddAssociationButton: TButton
+                Position.X = 694.000000000000000000
+                Position.Y = 458.000000000000000000
+                Size.Width = 85.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Add'
+                OnClick = AddAssociationButtonClick
+              end
+              object RemoveAssociationButton: TButton
+                Position.X = 694.000000000000000000
+                Position.Y = 515.000000000000000000
+                Size.Width = 107.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Remove Selected'
+                OnClick = RemoveAssociationButtonClick
+              end
+              object AssociationListLabel: TLabel
+                Position.Y = 448.000000000000000000
+                Size.Width = 760.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'File associations added'
+              end
+              object AssociationList: TListBox
+                Position.Y = 476.000000000000000000
+                Size.Width = 674.000000000000000000
+                Size.Height = 90.000000000000000000
+                Size.PlatformDefault = False
+                DisableFocusEffect = True
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 670.000000000000000000
+                Viewport.Height = 86.000000000000000000
+              end
+              object RegistryLabel: TLabel
+                Position.Y = 604.000000000000000000
+                Size.Width = 760.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Registry entry'
+              end
+              object RegistryKeyEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 632.000000000000000000
+                Size.Width = 390.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'HKCU\Software\Company\Product'
+              end
+              object RegistryNameEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 404.000000000000000000
+                Position.Y = 632.000000000000000000
+                Size.Width = 190.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Name'
+              end
+              object RegistryValueEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.X = 608.000000000000000000
+                Position.Y = 632.000000000000000000
+                Size.Width = 250.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Value'
+              end
+              object AddRegistryButton: TButton
+                Position.X = 872.000000000000000000
+                Position.Y = 632.000000000000000000
+                Size.Width = 86.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Add'
+                OnClick = AddRegistryButtonClick
+              end
+              object RemoveRegistryButton: TButton
+                Position.X = 970.000000000000000000
+                Position.Y = 632.000000000000000000
+                Size.Width = 76.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Remove'
+                OnClick = RemoveRegistryButtonClick
+              end
+              object RegistryList: TListBox
+                Position.Y = 684.000000000000000000
+                Size.Width = 1046.000000000000000000
+                Size.Height = 90.000000000000000000
+                Size.PlatformDefault = False
+                DisableFocusEffect = True
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 1042.000000000000000000
+                Viewport.Height = 86.000000000000000000
+              end
+            end
+          end
+        end
+        object BuildReviewTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Font.Size = 13.500000000000000000
+          StyledSettings = []
+          IsSelected = False
+          Size.Width = 96.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Build Review'
+          ExplicitSize.cx = 80.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          object BuildReviewScroll: TScrollBox
+            Align = Client
+            Size.Width = 1300.000000000000000000
+            Size.Height = 576.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 1300.000000000000000000
+            Viewport.Height = 576.000000000000000000
+            object BuildReviewPage: TLayout
+              Position.X = 31.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 1145.000000000000000000
+              Size.Height = 480.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object Label1: TLabel
+                StyledSettings = []
+                Size.Width = 185.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Build Information'
+                TabOrder = 0
+              end
+              object OutputFolderLabel: TLabel
+                StyledSettings = []
+                Position.Y = 40.000000000000000000
+                Size.Width = 145.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Output folder'
+              end
+              object OutputFolderEdit: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Position.Y = 68.000000000000000000
+                Size.Width = 720.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object BrowseOutputButton: TButton
+                Position.X = 740.000000000000000000
+                Position.Y = 68.000000000000000000
+                Size.Width = 160.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Browse Output...'
+                OnClick = BrowseOutputButtonClick
+              end
+              object ReviewLabel: TLabel
+                Position.Y = 128.000000000000000000
+                Size.Width = 500.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Build summary'
+              end
+              object ReviewMemo: TMemo
+                Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+                DataDetectorTypes = []
+                ReadOnly = True
+                TextSettings.WordWrap = True
+                Position.Y = 158.000000000000000000
+                Size.Width = 500.000000000000000000
+                Size.Height = 300.000000000000000000
+                Size.PlatformDefault = False
+                Viewport.Width = 496.000000000000000000
+                Viewport.Height = 296.000000000000000000
+              end
+              object LogLabel: TLabel
+                StyledSettings = []
+                Position.X = 536.000000000000000000
+                Position.Y = 130.000000000000000000
+                Size.Width = 201.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Validation and build messages'
+              end
+              object LogMemo: TMemo
+                Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+                DataDetectorTypes = []
+                ReadOnly = True
+                TextSettings.WordWrap = True
+                Position.X = 536.000000000000000000
+                Position.Y = 160.000000000000000000
+                Size.Width = 569.000000000000000000
+                Size.Height = 300.000000000000000000
+                Size.PlatformDefault = False
+                Viewport.Width = 565.000000000000000000
+                Viewport.Height = 296.000000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

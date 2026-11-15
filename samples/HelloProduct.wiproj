@@ -1,0 +1,34 @@
+﻿{
+  "schema": "PackageStudioPro.Project.v1",
+  "productName": "Hello Product",
+  "publisher": "Package Studio Pro Lab",
+  "version": "1.0.0",
+  "installFolder": "bin\\InstalledHelloProduct",
+  "licenseText": "Sample license for Hello Product. Replace this text with the real license terms for your product.",
+  "signingEnabled": false,
+  "signToolPath": "signtool.exe",
+  "signingCertificatePath": "",
+  "timestampUrl": "http://timestamp.digicert.com",
+  "files": [
+    "samples\\payload\\hello.txt"
+  ],
+  "shortcuts": [
+    "InstallFolder|Hello Product|hello.txt"
+  ],
+  "registry": [
+    "HKCU\\Software\\PackageStudioProLab\\Hello Product|InstallFolder|bin\\InstalledHelloProduct"
+  ],
+  "environment": [
+    "HELLO_PRODUCT_HOME|bin\\InstalledHelloProduct"
+  ],
+  "fileAssociations": [
+    ".hello|Hello Product File|hello.txt"
+  ],
+  "prerequisites": [
+    ".NET Desktop Runtime|Manual|https://dotnet.microsoft.com/"
+  ],
+  "features": [
+    "Core|Required|Core application files"
+  ]
+}
+

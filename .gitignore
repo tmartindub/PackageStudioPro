@@ -1,0 +1,23 @@
+# Build output and user-owned setup projects
+bin/
+dcu/
+Exports/
+MySetups/
+_backups/
+test-results/
+*.dcu
+*.rsm
+*.identcache
+*.dproj.local
+*.groupproj.local
+*.stat
+*.tvsconfig
+*.~*
+*.pfx
+*.p12
+*.key
+*.pem
+.env*
+
+# Local documentation-generator configuration
+docs/UserDoc.hdc.json

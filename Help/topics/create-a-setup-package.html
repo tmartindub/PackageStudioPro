@@ -1,0 +1,22 @@
+﻿<!doctype html><html><head><meta charset="utf-8"><title>Create a Setup Package</title><link rel="stylesheet" href="../style.css"></head><body class="topic-page"><main><div class="doc-topic" style="display:block;">
+<h1>Create a Setup Package</h1>
+<p>Run C:\Development\Package Studio Pro\bin\PackageStudioPro.exe.</p>
+<ol>
+<li>Open the Product tab and click Browse Source File. Select the Delphi source/project file for the application.</li>
+<li>Confirm the product name. Package Studio Pro fills this from the selected source file name, such as MazeFMX to Maze FMX.</li>
+<li>Confirm Publisher and Version.</li>
+<li>Open the Payload tab. Add support files or folders that should be installed with the application.</li>
+<li>Open the Install tab. Confirm the install folder, shortcut options, and optional license text.</li>
+<li>Open the Integration tab only when the package needs environment variables, PATH entries, file associations, or HKCU registry entries.</li>
+<li>Open the Build &amp; Review tab. Confirm the Project file and Build output folder. The output folder controls where the setup package is exported.</li>
+<li>Click Validate. Resolve any validation messages before building.</li>
+<li>Click Build Package. The final setup executable is named with the product token plus Setup.exe, such as MorseTrainerSetup.exe. It is self-contained and embeds the install manifest and payload.<br></li>
+</ol><div>Below is a mockup project, for example purposes:</div><div><br></div><div>Product tab: Add the Authoring project file name and then fill in information about your application product.<br><img src="../assets/editor-image-20260525194331095-1.png" alt="" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;" draggable="true" title="Drag to move image"></div><div><br></div><div>Payload tab: Add any files and folders that will be transported.</div><div><img src="../assets/editor-image-20260525194331096-2.png" alt="" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;" draggable="true" title="Drag to move image"></div><div><br></div><div>Install tab: Add installation directives so it will be installed where you want and how you want.</div><div><img src="../assets/editor-image-20260525194331098-3.png" alt="" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;" draggable="true" title="Drag to move image"></div><div><br></div><div>Integration tab: Add environment variables, path information, file associations and any registry keys.</div><div><img src="../assets/editor-image-20260525194331099-4.png" alt="" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;" draggable="true" title="Drag to move image"></div><div><br></div><div>Build review tab: Add the "Output folder" for your setup file, then review your entered information.&nbsp; Click the "Validate Project" to be sure all fields are completed. If all is good, click the "Build Setup File" button to generate the&nbsp;</div><div><img src="../assets/editor-image-20260525194331100-5.png" alt="" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;" draggable="true" title="Drag to move image" class=""></div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<table class="doc-table" style="border-collapse:collapse;width:94%;margin:18px 0 18px 18px;background:#f7fbf8;border:1px solid #333;" border="1" cellspacing="0" cellpadding="7">
+<tbody><tr><th style="border:1px solid #333;padding:7px 10px;vertical-align:top;text-align:left;line-height:1.35;background:#1f6f54;color:#ffffff;font-weight:bold;height:auto;overflow:visible;">Output naming:<br><br>A product named My Application exports as MyApplicationSetup.exe. The folder also contains embedded-manifest.json, payload, build-report.txt, safety-report.txt, WipRuntime.exe, and an export ZIP.<br><br></th></tr></tbody>
+</table>
+</div><div class="page-nav"><a href="../index.html" target="_top">Contents</a><a href="required-information.html">Previous</a><a href="running-the-exported-installer.html">Next</a></div></main><script>try{parent.postMessage({helpTopic:"topics/create-a-setup-package.html"},"*");}catch(e){}</script></body></html>
