@@ -1,0 +1,25 @@
+﻿<!doctype html><html><head><meta charset="utf-8"><title>Create a Setup Package</title><link rel="stylesheet" href="../style.css"></head><body class="topic-page"><main><div class="doc-topic" style="display:block;">
+<!-- HDC_HTML -->
+<article>
+<h1>Create a Setup Package</h1>
+<p>Run C:\Development\Package Studio Pro\bin\PackageStudioPro.exe.</p>
+<ol>
+<li>Open the Product tab and click Browse Source File. Select the Delphi source/project file for the application.</li>
+<li>Confirm the product name. Package Studio Pro fills this from the selected source file name, such as MazeFMX to Maze FMX.</li>
+<li>Confirm Publisher and Version.</li>
+<li>Open the Payload tab. Add support files or folders that should be installed with the application.</li>
+<li>Open the Install tab. Confirm the install folder, shortcut options, and optional license text.</li>
+<li>Open the Integration tab only when the package needs environment variables, PATH entries, file associations, or HKCU registry entries.</li>
+<li>Open the Build &amp; Review tab. Confirm the Project file and Build output folder. The output folder controls where the setup package is exported.</li>
+<li>Click Validate. Resolve any validation messages before building.</li>
+<li>Click Build Package. The final setup executable is named with the product token plus Setup.exe, such as MorseTrainerSetup.exe. It is self-contained and embeds the install manifest and payload.</li>
+</ol>
+<p><img src="../Images/ImportedAssets/PackageStudioPro/psp-payload-tab.png" alt="Payload tab" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;"></p>
+<p><img src="../Images/ImportedAssets/PackageStudioPro/psp-install-tab.png" alt="Install tab" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;"></p>
+<p><img src="../Images/ImportedAssets/PackageStudioPro/psp-integration-tab.png" alt="Integration tab with PATH entries" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;"></p>
+<p><img src="../Images/ImportedAssets/PackageStudioPro/psp-build-review-tab.png" alt="Build and Review tab" style="max-width: 100%; height: auto; display: block; margin: 16px 0px;"></p>
+<table class="doc-table">
+<tbody><tr><th>Output naming:<br><br>A product named My Application exports as MyApplicationSetup.exe. The folder also contains embedded-manifest.json, payload, build-report.txt, safety-report.txt, WipRuntime.exe, and an export ZIP.<br><br></th></tr></tbody>
+</table>
+</article>
+</div><div class="page-nav"><a href="../index.html" target="_top">Contents</a><a href="required-information.html">Previous</a><a href="run-the-exported-installer.html">Next</a></div></main><script>try{parent.postMessage({helpTopic:"topics/create-a-setup-package.html"},"*");}catch(e){}</script></body></html>

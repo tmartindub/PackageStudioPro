@@ -21,3 +21,6 @@ test-results/
 
 # Local documentation-generator configuration
 docs/UserDoc.hdc.json
+
+# Office lock files
+~$*
