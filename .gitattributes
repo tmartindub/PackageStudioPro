@@ -1,0 +1,2 @@
+# Keep release authoring inputs byte-for-byte, including compiled web assets.
+MySetups/DelphiWebStudioPro-1.0.0.1/** -text
