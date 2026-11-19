@@ -157,7 +157,7 @@ def user_guide():
 
     doc.add_heading("Create a Setup Package", level=1)
     steps = [
-        "Run C:\\Development\\Package Studio Pro\\bin\\PackageStudioPro.exe.",
+        "Launch Package Studio Pro from the Start menu or its installation folder.",
         "Open the Product tab and click Browse Source File. Select the Delphi source/project file for the application.",
         "Confirm the product name. Package Studio Pro fills this from the selected source file name, such as MazeFMX to Maze FMX.",
         "Confirm Publisher and Version.",

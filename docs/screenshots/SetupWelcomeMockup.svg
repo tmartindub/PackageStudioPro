@@ -18,7 +18,7 @@
   <text x="364" y="176" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#173f6b">Welcome to Help Doc Creator Setup</text>
   <text x="366" y="218" font-family="Segoe UI, Arial" font-size="16" fill="#294b70">This wizard will install Help Doc Creator on your computer.</text>
   <text x="366" y="263" font-family="Segoe UI, Arial" font-size="14" fill="#294b70">Before continuing, close any running copies of the application.</text>
-  <text x="366" y="304" font-family="Segoe UI, Arial" font-size="13" fill="#58728e">Publisher: Project contributors   |   Version 1.0.0   |   Files: 73</text>
+  <text x="366" y="304" font-family="Segoe UI, Arial" font-size="13" fill="#58728e">Publisher: Package Studio Pro   |   Version 1.0.0   |   Files: 73</text>
   <rect x="1000" y="314" width="130" height="36" rx="4" fill="#fff" stroke="#9eb8d3"/>
   <text x="1036" y="337" font-family="Segoe UI, Arial" font-size="13" fill="#111827">Continue</text>
   <rect x="-8" y="375" width="1179" height="60" fill="#f4f7fb"/>

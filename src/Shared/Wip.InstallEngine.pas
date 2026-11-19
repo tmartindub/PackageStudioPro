@@ -136,16 +136,7 @@ end;
 function TWipInstallEngine.ShortcutFolderForLocation(const ALocation, ATargetFolder: string): string;
 var
   LocationText: string;
-  UserScope: Boolean;
 begin
-  UserScope := IncludeTrailingPathDelimiter(TPath.GetFullPath(ATargetFolder)).StartsWith(
-    IncludeTrailingPathDelimiter(TPath.GetFullPath(GetEnvironmentVariable('USERPROFILE'))), True);
-  if not UserScope then begin
-    if SameText(ALocation, 'Desktop') then Exit(ShellFolderPath(CSIDL_COMMON_DESKTOPDIRECTORY,
-      TPath.Combine(GetEnvironmentVariable('PUBLIC'), 'Desktop')));
-    if SameText(ALocation, 'StartMenu') then Exit(ShellFolderPath(CSIDL_COMMON_PROGRAMS,
-      TPath.Combine(GetEnvironmentVariable('ProgramData'), 'Microsoft\Windows\Start Menu\Programs')));
-  end;
   LocationText := Trim(ALocation);
   if LocationText = '' then
     LocationText := 'InstallFolder';
@@ -1256,6 +1247,7 @@ begin
     except
       on E: Exception do
       begin
+        Log('Install error: ' + E.ClassName + ': ' + E.Message);
         if AMode = imInstall then begin
           RollbackManifest(Manifest, ATargetFolder);
           if PreviousManifest.Count > 0 then begin
